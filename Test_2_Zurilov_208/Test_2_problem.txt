@@ -1,0 +1,5 @@
+query-2-3-9
+
+=IIf([SamRob]="є" ; result: ([AudTypZanTr]/[ResTrim])
+-1 ; result: [AudTypZanTr]/[ResTrim]
+)

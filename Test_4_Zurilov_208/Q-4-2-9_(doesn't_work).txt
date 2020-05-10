@@ -1,0 +1,6 @@
+INSERT INTO DISC_KR4 (KodDysc, NazvDysc, NomTrym, YesLab, AudLab)
+VALUES(
+("4.14","Комп'ютерна мережа Internet",5,1,26.0),
+("3.10","Моделювання систем",10,0,0.0),
+("1.11","Економічна теорія",,0,0.0)
+);

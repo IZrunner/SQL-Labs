@@ -1,0 +1,25 @@
+sqlite3 parking.db
+
+CREATE TABLE vehicles (
+    code TEXT (20) PRIMARY KEY,
+    number TEXT(8) NOT NULL UNIQUE,
+    places_in_car_capacity INT DEFAULT (5),
+    owner_code TEXT (20) REFERENCES owners (code),
+    parking_code TEXT (20) REFERENCES parking_places (code) 
+);	
+CREATE UNIQUE INDEX vehicles_idx ON vehicles (code);
+
+
+CREATE TABLE parking_places (
+    code TEXT (20) PRIMARY KEY,
+    name TEXT (20),
+    parking_places_amount INT CHECK (parking_places_amount BETWEEN 10 AND 10000) 
+);
+CREATE UNIQUE INDEX parking_places_idx ON parking_places (code);
+
+
+CREATE TABLE owners (
+    code        TEXT (20) PRIMARY KEY,
+    second_name TEXT (30) NOT NULL
+);
+CREATE UNIQUE INDEX owners_idx ON owners (code);
